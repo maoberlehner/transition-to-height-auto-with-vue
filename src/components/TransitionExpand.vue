@@ -31,6 +31,11 @@ export default {
           element.style.height = 0;
           /* eslint-enable */
 
+          // Force repaint to make sure the
+          // animation is triggered correctly.
+          // eslint-disable-next-line no-unused-expressions
+          getComputedStyle(element).height;
+
           setTimeout(() => {
             // eslint-disable-next-line no-param-reassign
             element.style.height = height;
@@ -41,6 +46,11 @@ export default {
 
           // eslint-disable-next-line no-param-reassign
           element.style.height = height;
+
+          // Force repaint to make sure the
+          // animation is triggered correctly.
+          // eslint-disable-next-line no-unused-expressions
+          getComputedStyle(element).height;
 
           setTimeout(() => {
             // eslint-disable-next-line no-param-reassign
