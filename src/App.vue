@@ -7,7 +7,10 @@
       sed diam nonumy eirmod tempor invidunt ut labore et dolore.
     </div>
     <transition-expand>
-      <div v-if="expanded">
+      <div
+        v-if="expanded"
+        class="target"
+      >
         Magna aliquyam erat, sed diam voluptua. At vero eos et
         accusam et justo duo dolores et ea rebum. Stet clita kasd
         gubergren, no sea takimata sanctus est Lorem ipsum dolor
@@ -45,9 +48,13 @@ export default {
 </script>
 
 <style>
+.target {
+  padding: 1rem 0.5rem;
+  margin: 2rem 1rem;
+}
 .expand-enter-active,
 .expand-leave-active {
-  transition-property: opacity, height;
+  transition-property: opacity, height, padding, margin;
 }
 
 .expand-enter,
