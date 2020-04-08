@@ -10,7 +10,7 @@ export default {
       on: {
         afterEnter(element) {
           // eslint-disable-next-line no-param-reassign
-          element.style.height = `auto`;
+          element.style.height = null;
         },
         enter(element) {
           const { width } = getComputedStyle(element);
@@ -62,6 +62,10 @@ export default {
             // eslint-disable-next-line no-param-reassign
             element.style.height = 0;
           });
+        },
+        afterLeave(element) {
+          // eslint-disable-next-line no-param-reassign
+          element.style.height = null;
         },
       },
     };
